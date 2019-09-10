@@ -7,12 +7,18 @@ const bodyParser = require('body-parser');
 const routes = require('./routes'); 
 const Sequelize = require('sequelize');
 const sequelize = require("./models").sequelize;
+const cors = require('cors')
+
+ 
+
 // variable to enable global error logging
 const enableGlobalErrorLogging = process.env.ENABLE_GLOBAL_ERROR_LOGGING === 'true';
 
 // create the Express app
 const app = express();
 
+// Enable CORS
+app.use(cors());
 // setup morgan which gives us http request logging
 app.use(morgan('dev'));
 

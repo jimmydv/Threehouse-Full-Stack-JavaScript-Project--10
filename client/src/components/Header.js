@@ -14,7 +14,7 @@ const Header = ({context , ...props}) => {
                     {context.authUser ? (
                         <nav>
                         <span>
-                            Welcome,
+                            You are logged in as, &nbsp;
                             {context.authUser.firstName}
                             &nbsp;
                             {context.authUser.lastName} !
