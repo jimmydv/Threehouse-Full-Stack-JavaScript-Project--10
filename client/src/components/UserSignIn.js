@@ -34,7 +34,9 @@ class UserSignIn extends Component {
         }).catch((err) => {
             this.setState({
                 errors: err.response.data.message 
+                
             })
+            console.log(err.response.data.message);
         });
 
     }

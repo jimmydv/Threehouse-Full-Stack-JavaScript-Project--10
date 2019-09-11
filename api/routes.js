@@ -45,7 +45,7 @@ const authenticateUser = (req, res, next) => {
               next(err);
             }
           } else {
-          const err = new Err(`User not found for email Address: ${credentials.name}`);
+          const err = new Error(`User not found for email Address: ${credentials.name}`);
            err.status=401
            next(err);
           }
